@@ -13,7 +13,7 @@ test('local authentication, missing AI setup, contacts and logout',async()=>{
   assert.equal((await post('/api/v1/auth/login',{username:'klim',password:'wrong'})).status,401);
   const login=await post('/api/v1/auth/login',{username:'klim',password:'klim'});assert.equal(login.status,200);const cookie=login.headers.get('set-cookie')!.split(';')[0];assert.match(login.headers.get('set-cookie')!,/HttpOnly/);
   const catalog=await fetch(base+'/api/v1/services',{headers:{cookie}});assert.equal((await catalog.json()).length,6);
-  const contacts=await fetch(base+'/api/v1/contacts',{headers:{cookie}});assert.ok((await contacts.json()).every((c:{url:unknown})=>c.url===null));
+  const contacts=await fetch(base+'/api/v1/contacts',{headers:{cookie}});assert.deepEqual(await contacts.json(),[{id:'telegram',name:'Telegram'},{id:'whatsapp',name:'WhatsApp'}]);
   assert.equal((await post('/api/v1/assistant/messages',{message:''},cookie)).status,400);
   const ai=await post('/api/v1/assistant/messages',{message:'Как подключить сервис?'},cookie);assert.equal(ai.status,503);assert.equal((await ai.json()).code,'AI_NOT_CONFIGURED');
   const external=await fetch(base+'/api/v1/auth/login',{method:'POST',headers:{Origin:'https://evil.example','Content-Type':'application/json'},body:'{}'});assert.equal(external.status,403);

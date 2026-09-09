@@ -7,7 +7,7 @@ import { services } from './catalog.ts';
 import { retrieve } from './knowledge.ts';
 import type { ChatMessage, Source } from '../shared/types.ts';
 
-export function createApp(config:{apiKey?:string;model?:string;telegram?:string;whatsapp?:string}={}) {
+export function createApp(config:{apiKey?:string;model?:string}={}) {
  const app=express(); app.disable('x-powered-by');
  const sessions=new Map<string,{expires:number;requests:number[]}>();
  const attempts=new Map<string,number[]>();
@@ -38,8 +38,7 @@ export function createApp(config:{apiKey?:string;model?:string;telegram?:string;
  app.use('/api/v1',(req,res,next)=>{const id=token(req),session=id?sessions.get(id):undefined;if(!session||session.expires<Date.now())return res.status(401).json({error:'Сессия завершена. Войдите снова.'});next();});
  app.get('/api/v1/auth/session',(_req,res)=>res.json({user:{name:'klim'}}));
  app.get('/api/v1/services',(_req,res)=>res.json(services));
- const validContact=(url:string|undefined,hosts:string[])=>{if(!url)return null;try{const u=new URL(url);return u.protocol==='https:'&&hosts.includes(u.hostname)?url:null;}catch{return null;}};
- app.get('/api/v1/contacts',(_req,res)=>res.json([{id:'telegram',name:'Telegram',url:validContact(config.telegram,['t.me','telegram.me'])},{id:'whatsapp',name:'WhatsApp',url:validContact(config.whatsapp,['wa.me','api.whatsapp.com'])}]));
+ app.get('/api/v1/contacts',(_req,res)=>res.json([{id:'telegram',name:'Telegram'},{id:'whatsapp',name:'WhatsApp'}]));
  app.post('/api/v1/assistant/messages',async(req,res)=>{
   const message=req.body?.message;
   if(typeof message!=='string'||!message.trim()||message.length>2000)return res.status(400).json({error:'Введите вопрос длиной от 1 до 2000 символов.'});
