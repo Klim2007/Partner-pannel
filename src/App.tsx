@@ -10,7 +10,7 @@ function ServiceCard({service:s}:{service:Service}) {
   <header className="card-header"><span className="service-number">0{s.displayOrder}</span><span className="provider">{s.provider}</span></header>
   <h2>{s.name}</h2>
   <div className="visual-wrap">
-   <img className="service-image" src={s.imageUrl} alt={s.imageAlt} loading={s.displayOrder>3?'lazy':'eager'}/>
+   <picture><source srcSet={s.imageUrl} type="image/webp"/><img className="service-image" src={s.imageUrl.replace('.webp','.png')} alt={s.imageAlt} loading={s.displayOrder>3?'lazy':'eager'}/></picture>
    <button className="visual-trigger" aria-label={`Подробнее: ${s.name}`} aria-expanded={open} onClick={()=>{setSuppressed(false);setOpen(true)}}><span className="view-hint">Узнать больше <ArrowUpRight size={16}/></span></button>
    <div className="card-details" inert={!open} aria-hidden={!open}>
     <p className="offer">{s.offer}</p><p className="description">{s.description}</p>
@@ -33,7 +33,7 @@ function Chat(){
  function close(){setOpen(false);launcher.current?.focus()}
  return <div className="assistant">
  {open&&<section className="chat-window" role="dialog" aria-modal="false" aria-label="VTBшка — AI-помощник" onKeyDown={e=>{if(e.key==='Escape')close();}}>
-  <header className="chat-header"><img src="/images/mascot.png" alt=""/><div><strong>VTBшка</strong><span>Ваш AI-помощник</span></div><button onClick={close} aria-label="Закрыть чат"><X size={20}/></button></header>
+  <header className="chat-header"><picture><source srcSet="/images/mascot.webp" type="image/webp"/><img src="/images/mascot.png" alt=""/></picture><div><strong>VTBшка</strong><span>Ваш AI-помощник</span></div><button onClick={close} aria-label="Закрыть чат"><X size={20}/></button></header>
   <div className="chat-messages" role="log" aria-live="polite">
    <div className="welcome"><span className="welcome-emoji">Здравствуйте!</span><p>Я VTBшка. Помогу разобраться в сервисах и найти инструкции VTB Business.</p><div className="suggestions">{['Как подключить сервис?','Где найти инструкции?'].map(q=><button key={q} disabled={busy} onClick={()=>send(q)}>{q}<ArrowUpRight size={14}/></button>)}</div></div>
    {messages.map((m,i)=><div className={`message ${m.role}`} key={i}><p>{m.content}</p>{m.sources&&m.sources.length>0&&<div className="sources"><small>Материалы по вопросу</small>{m.sources.map(s=><a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer">{s.title}<ArrowUpRight size={12}/></a>)}</div>}</div>)}
@@ -43,7 +43,7 @@ function Chat(){
   <form className="chat-form" onSubmit={e=>{e.preventDefault();send(value)}}><textarea ref={input} aria-label="Вопрос VTBшке" placeholder="Задайте вопрос…" maxLength={2000} value={value} onChange={e=>setValue(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send(value)}}}/><button disabled={busy||!value.trim()} aria-label="Отправить вопрос"><ArrowRight size={20}/></button></form>
   <p className="chat-footnote">Не отправляйте пароли и коды подтверждения</p>
  </section>}
- <button ref={launcher} className={`assistant-launcher ${open?'active':''}`} onClick={()=>setOpen(!open)} aria-label={open?'Свернуть VTBшку':'Открыть VTBшку — AI-помощника'} aria-expanded={open}><span className="assistant-label"><strong>VTBшка</strong><span>Могу помочь?</span></span><img src="/images/mascot.png" alt="Маскот VTBшка"/><span className="assistant-dot"/></button>
+ <button ref={launcher} className={`assistant-launcher ${open?'active':''}`} onClick={()=>setOpen(!open)} aria-label={open?'Свернуть VTBшку':'Открыть VTBшку — AI-помощника'} aria-expanded={open}><span className="assistant-label"><strong>VTBшка</strong><span>Могу помочь?</span></span><picture><source srcSet="/images/mascot.webp" type="image/webp"/><img src="/images/mascot.png" alt="Маскот VTBшка"/></picture><span className="assistant-dot"/></button>
  </div>;
 }
 
