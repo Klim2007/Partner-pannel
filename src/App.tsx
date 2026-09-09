@@ -36,7 +36,7 @@ function Chat(){
   <header className="chat-header"><picture><source srcSet="/images/mascot.webp" type="image/webp"/><img src="/images/mascot.png" alt=""/></picture><div><strong>VTBшка</strong><span>Ваш AI-помощник</span></div><button onClick={close} aria-label="Закрыть чат"><X size={20}/></button></header>
   <div className="chat-messages" role="log" aria-live="polite">
    <div className="welcome"><span className="welcome-emoji">Здравствуйте!</span><p>Я VTBшка. Помогу разобраться в сервисах и найти инструкции VTB Business.</p><div className="suggestions">{['Как подключить сервис?','Где найти инструкции?'].map(q=><button key={q} disabled={busy} onClick={()=>send(q)}>{q}<ArrowUpRight size={14}/></button>)}</div></div>
-   {messages.map((m,i)=><div className={`message ${m.role}`} key={i}><p>{m.content}</p>{m.sources&&m.sources.length>0&&<div className="sources"><small>Материалы по вопросу</small>{m.sources.map(s=><a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer">{s.title}<ArrowUpRight size={12}/></a>)}</div>}</div>)}
+   {messages.map((m,i)=><div className={`message is-${m.role}`} key={i}><p>{m.content}</p>{m.sources&&m.sources.length>0&&<div className="sources"><small>Материалы по вопросу</small>{m.sources.map(s=><a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer">{s.title}<ArrowUpRight size={12}/></a>)}</div>}</div>)}
    {busy&&<p className="thinking"><LoaderCircle size={16}/>VTBшка готовит ответ…</p>}
    {error&&<div className="chat-error" role="alert">{error}{retry&&<button onClick={()=>send(retry.text,retry.history,true)}><RotateCcw size={14}/>Повторить</button>}</div>}<div ref={end}/>
   </div>
