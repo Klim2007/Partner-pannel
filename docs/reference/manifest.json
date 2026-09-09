@@ -1,0 +1,32 @@
+{
+  "capturedAt": "2026-09-09T12:00:43.610Z",
+  "source": "https://ib.vtb-bank.kz/ru/html/login.html",
+  "changes": [
+    "Bank scripts and hidden tokens removed",
+    "Local resource paths",
+    "Local login handler and keyboard icon"
+  ],
+  "assets": [
+    "https://ib.vtb-bank.kz/ru/css/login.css",
+    "https://ib.vtb-bank.kz/ru/img/head/bordersmall.gif",
+    "https://ib.vtb-bank.kz/ru/img/new/favicon.ico",
+    "https://ib.vtb-bank.kz/ru/css/keyboard.css",
+    "https://ib.vtb-bank.kz/ru/css/bootstrap.min.css",
+    "https://ib.vtb-bank.kz/ru/img/new/logo.png",
+    "https://ib.vtb-bank.kz/ru/img/logon/keyboard.png",
+    "https://ib.vtb-bank.kz/en/css/login.css",
+    "https://ib.vtb-bank.kz/en/img/head/bordersmall.gif",
+    "https://ib.vtb-bank.kz/en/img/new/favicon.ico",
+    "https://ib.vtb-bank.kz/en/css/keyboard.css",
+    "https://ib.vtb-bank.kz/en/css/bootstrap.min.css",
+    "https://ib.vtb-bank.kz/en/img/new/logo.png",
+    "https://ib.vtb-bank.kz/en/img/logon/keyboard.png",
+    "https://ib.vtb-bank.kz/kz/css/login.css",
+    "https://ib.vtb-bank.kz/kz/img/head/bordersmall.gif",
+    "https://ib.vtb-bank.kz/kz/img/new/favicon.ico",
+    "https://ib.vtb-bank.kz/kz/css/keyboard.css",
+    "https://ib.vtb-bank.kz/kz/css/bootstrap.min.css",
+    "https://ib.vtb-bank.kz/kz/img/new/logo.png",
+    "https://ib.vtb-bank.kz/kz/img/logon/keyboard.png"
+  ]
+}

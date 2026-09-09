@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="/reference/ru/css/login.css">
+    <link rel="icon" type="image/x-icon" href="/reference/ru/img/new/favicon.ico">
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/reference/ru/css/keyboard.css">
+
+    <link rel="stylesheet" type="text/css" href="/reference/ru/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'; form-action 'self'; object-src 'none'"></head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="top" style="text-align: left;">
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/ru/security_notes_ru.pdf">Памятка по безопасности</a>
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/ru/software_ru.html">Программное обеспечение</a>
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/ru/instruction_ru.html">Инструкции</a>
+        <b>&#8226;</b>
+        <a href="#">Демо-версия</a>
+    </div>
+</div>
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+        <div class="inner cover">
+            <!--table-->
+            <div class="container">
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 15px;">
+
+                        </div>
+                        <div class="logo">
+                            <img src="/reference/ru/img/new/logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 white"></div>
+                    <div class="col-md-3 white right-panel" align="center" style="position: relative">
+                        <div id="lang" align="right">
+                            <div class="language ru current" >ru</div><div class="language en">en</div><div class="language kz">kz</div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="info-box">
+                            <div class="curRates" id="curRates">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 10px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white login_label">Пользователь</div>
+                    <div class="col-md-3 white login_label">Пароль</div>
+                    <div class="col-md-3 white"></div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 20px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white" align="left">
+                        <input id="userName" class="input"
+                               type="text">
+                    </div>
+                    <div class="col-md-6 white" align="left">
+                        <input
+                                id="password"
+                                class="input"
+                                value=""
+                                type="password">
+                        <img src="/reference/ru/img/logon/keyboard.png" class="keyboardInputInitiator" role="button" tabindex="0" alt="Отобразить виртуальную клавиатуру" id="localKeyboardButton">
+                        <div class="tooltips" id="errorFrame"
+                             style="display:none;">
+                            <div class="errmsg"><span
+                                    id="errorMessage"></span></div>
+                        </div>
+                        <span style="visibility:hidden;"
+                              id="capsIndicator">
+                            <b style="color:red">
+                                Нажата клавиша Caps Lock
+                            </b>
+                        </span>
+                        <br>
+                    </div>
+                </div>
+                <div class="row column" id="divUnlockButton">
+                    <div class="col-md-12 white" style="padding: 12px;"></div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-6 white">
+                        <div style="padding: 25px;">
+                        </div>
+                    </div>
+                    <div class="col-md-3 white" style="text-align: right">
+                        <button type="button" id="submitButton" class="btn">
+                            Войти
+                        </button>
+                    </div>
+                    <div class="col-md-3 white" style="text-align: center">
+                        <button type="button" id="forgotPassword">
+                            Забыли пароль?
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="com-md-12">
+                        <div style="padding: 25px;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center">
+                        <table class='news_table'><tbody><tr><td><div class='news'><div class='date'>05.06.2026</div><div class='news-title'>НОВЫЙ СЕРВИС В ИБ ЮЛ: Переводы между своими счетами в рублях в праздничные дни в Российской Федерации.</div><div class='text'>
+<p>Уважаемые клиенты!
+Мы рады сообщить, что возможности системы ИБЮЛ расширены. Теперь вы можете осуществлять переводы в российских рублях между своими счетами (включая пополнение вкладов и частичное изъятие средств) даже в период официальных праздничных дней в Российской Федерации.
+📌 Обратите внимание на важное условие: Если праздничный день в России совпадает с выходным или праздничным днем в Казахстане, данные переводы будут недоступны, так как для их проведения требуется работа службы валютного контроля.
+Как это работает (на примерах):
+12 июня (праздник в РФ, но рабочий день в РК) — переводы между своими счетами в рублях доступны.
+1 мая (праздник и в РФ, и в РК) — переводы между своими счетами в рублях недоступны.
+Остальной порядок проведения рублевых операций в праздничные дни РФ остается прежним. Новый функционал уже запущен и доступен в системе ИБЮЛ.
+С уважением, ДО АО Банк ВТБ (Казахстан)
+</p></div></div></td></tr><tr><td><div class='news'><div class='date'>29.05.2026</div><div class='news-title'>Приостановление открытия онлайн-счетов</div><div class='text'>
+<p>Уважаемые клиенты! Дистанционное открытие счетов временно недоступно. В связи с новыми требованиями законодательства по надлежащей проверке клиентов, мы внедряем обновленную систему биометрической верификации. Для открытия счета, вклада или карты, пожалуйста, обратитесь в любое отделение Банка. Приносим извинения за неудобства!</p></div></div></td></tr><tr><td><div class='news'><div class='date'>24.04.2026</div><div class='news-title'>НОВЫЙ СЕРВИС В ИБ ЮЛ: Заявка на снятие/выдачу наличных денег с банковского счета</div><div class='text'>
+<p>Уважаемые, Клиенты!</p>
+<p>Рады сообщить Вам о реализации нового сервиса в системе &#34;Интернет - банк для ЮЛ&#34; - &#34;Заявка на снятие/выдачу наличных денег с банковского счета&#34;.</p>
+<p>Новая услуга позволит Вам подать Заявку на снятие/выдачу наличных денег с банковского счета через систему ИБЮЛ. 
+Заявка разработана с  предзаполненными данными, поэтому Вам останется заполнить лишь два поля вручную - Дату выдачи и сумму денег, планируемую к снятию.
+Пользовательская инструкция по заполнению Заявки на снятие/выдачу наличных денег с банковского счета, прилагается:</p>
+<p>Услуга доступна с 24 апреля 2026 года. </p>
+
+<p><a href="https://ib.vtb-bank.kz/ru/news/res/019dbf42-d1d8-160b-b971-a01dc9846b91/%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%B2%D1%8B%D0%B4%D0%B0%D1%87%D1%83_%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%BD%D0%B5%D0%B3.docx" target="_blank" title="019dbf42-d1d8-160b-b971-a01dc9846b91/Заявка на выдачу наличных денег.docx">Заявка на выдачу наличных денег.docx</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>24.04.2026</div><div class='news-title'>НОВЫЙ СЕРВИС В ИБ ЮЛ: Оплата Таможенных платежей в Российскую Федерацию</div><div class='text'>
+<p>Уважаемые, Клиенты!</p>
+<p>Рады сообщить Вам о реализации нового сервиса в системе &#34;Интернет - банк для ЮЛ&#34; - &#34;Оплата таможенных платежей в Российскую Федерацию&#34;.</p>
+<p>Новый процесс позволит оплачивать таможенные платежи в РФ, с указанием &#34;Таможенного кода&#34;, который отображается, если &#34;Код бюджетной классификации&#34; начинается со  
+&#34;153.....&#34;. Доработка реализована в форме заявления - &#34;Оплата налога в бюджет РФ&#34;.
+Пользовательская инструкция по оплате Таможенных платежей в РФ в системе &#34;Интернет - банк для ЮЛ&#34;, прилагается:</p>
+<p>Оплата таможенных платежей в Российскую Федерацию доступна с 24 апреля 2026 года.</p>
+<p><a href="https://ib.vtb-bank.kz/ru/news/res/019dbf3e-37b1-1541-a33b-d6ae26d01e37/%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0_%D1%82%D0%B0%D0%BC%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D1%85_%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D0%B9_%D0%B2_%D0%A0%D0%A4.docx" target="_blank" title="019dbf3e-37b1-1541-a33b-d6ae26d01e37/Оплата_таможенных_платежей_в_РФ.docx">Оплата_таможенных_платежей_в_РФ.docx</a>
+</p></div></div></td></tr><tr><td><div class='news'><div class='date'>13.03.2024</div><div class='news-title'>Об изменении тарифов для ЮЛ</div><div class='text'>
+<p>Банк ВТБ (Казахстан) в соответствии с п. 1.7. Договора присоединения об открытии текущего счета (для юридических лиц и их обособленных подразделений (филиалов, представительств)), утвержденным Правлением Банка (протокол № 16 от «10» марта 2021 года), с учетом изменений и дополнений (далее - Договор), уведомляет клиентов банка, присоединившихся к данному Договору и открывших текущие счета на его условиях, об изменении с 01 апреля 2024 года размеров тарифов банка по платежным услугам, оказываемым в рамках Договора.</p>
+<p><a href="https://ib.vtb-bank.kz/ru/news/res/018e415b-982f-15c3-9381-9705cf221595/%D0%9E%D0%B1_%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B8_%D1%82%D0%B0%D1%80%D0%B8%D1%84%D0%BE%D0%B2_%D0%B4%D0%BB%D1%8F_%D0%AE%D0%9B.pdf" target="_blank" title="018e415b-982f-15c3-9381-9705cf221595/Об изменении тарифов для ЮЛ.pdf">Об изменении тарифов для ЮЛ.pdf</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>09.01.2024</div><div class='news-title'>Уважаемые клиенты!</div><div class='text'>
+<p>Банк ВТБ (Казахстан) в соответствии с п. 1.7. Договора присоединения об открытии текущего счета (для юридических лиц и их обособленных подразделений (филиалов, представительств)), утвержденным Правлением Банка (протокол № 16 от «10» марта 2021 года), с учетом изменений и дополнений (далее - Договор), уведомляет клиентов банка, присоединившихся к данному Договору и открывших текущие счета на его условиях, об изменении с 22 января 2024 года размеров тарифов банка по платежным услугам, оказываемым в рамках Договора.</p>
+<p><a href="https://ib.vtb-bank.kz/ru/news/res/018ced10-8d8e-15b6-b74d-6b8780b29355/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%AE%D0%9B_%D1%80%D1%83%D1%81.pdf" target="_blank" title="018ced10-8d8e-15b6-b74d-6b8780b29355/Объявление для клиентов ЮЛ рус.pdf">Объявление для клиентов ЮЛ рус.pdf</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>08.01.2024</div><div class='news-title'>Уважаемые клиенты!</div><div class='text'>
+<p>Банк ВТБ (Казахстан) настоящим в соответствии с п.1.8. Договора присоединения об открытии текущего счета (для индивидуальных предпринимателей, адвокатов, нотариусов, частных судебных исполнителей, крестьянских (фермерских) хозяйств, профессиональных медиаторов), утвержденным Правлением Банка (протокол №16 от «10» марта 2021 года), с учетом изменений и дополнений (далее - Договор), уведомляет клиентов Банка, присоединившихся к данному Договору и открывших текущие счета на его условиях, об изменении с 22 января 2024 года размеров тарифов Банка по платежным услугам, оказываемым в рамках Договора.</p>
+<p><a href="https://ib.vtb-bank.kz/ru/news/res/018ced10-1f32-1fe6-8bbf-e0f68631abb2/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%98%D0%9F_%D1%80%D1%83%D1%81.pdf" target="_blank" title="018ced10-1f32-1fe6-8bbf-e0f68631abb2/Объявление для клиентов ИП рус.pdf">Объявление для клиентов ИП рус.pdf</a></p></div></div></td></tr></tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover-container">
+            <div class="mastfoot">
+                <div class="footer-cell" style="width: 100%" align="center">
+                    <div>
+                        <div align="center" style="width: 970px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div align="left">
+                                        Группа поддержки пользователей СДБО по телефонам:
+                                        <br>
+                                        <div class="phoneNumber">
+                                            +7(727)330-67-67
+                                        </div>
+                                        (Бесплатно с городских номеров по г. Алматы)
+                                        <br>
+                                        <div class="phoneNumber">
+                                            +7-702-017-67-67
+                                        </div>
+                                        (в соответствии с тарифами оператора сотовой связи)
+                                        <br>
+                                        e-mail: onlineservice@vtb-bank.kz
+                                        <br>
+                                        e-mail для предложений: proposal@vtb-bank.kz
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div align="right" >
+                                        <span>© ДО АО «Банк ВТБ Казахстан»</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<div id="modalMask" style="z-index: 1800; background: none repeat scroll 0 0 #E0E1E3; top: 0; left: 0; height: 100%; width: 100%;
+    opacity: 0; position: absolute; display: none;"></div>
+
+
+<!--[if lt IE 9 ]>
+
+<![endif]-->
+
+
+
+
+
+
+
+
+<noscript>
+    <div class="noscript"><p>Sorry, JavaScript must be enabled.<br/>Change your browser options, then <a href="">try
+        again</a>.</p></div>
+</noscript>
+<script src="/login/local.js" defer></script></body>
+</html>

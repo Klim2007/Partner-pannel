@@ -1,0 +1,332 @@
+
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+.btn-secondary,mastfoot
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    background-color: black;
+    border: .05rem solid black;
+}
+
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    text-align: center;
+    padding-bottom: 120px;
+    width: 100% !important;
+}
+
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;     min-height: 100%;
+}
+
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inner {
+    padding: 2rem;
+}
+
+
+.masthead {
+    margin-bottom: 2rem;
+}
+
+.masthead-brand {
+    margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.nav-masthead .active {
+    color: black;
+    border-bottom-color: black;
+}
+
+@media (min-width: 48em) {
+    .masthead-brand {
+        float: left;
+    }
+
+    .nav-masthead {
+        float: right;
+    }
+}
+
+
+.cover {
+    padding: 0 1.5rem;
+}
+
+.cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: bold;
+}
+
+
+.mastfoot {
+    background-color: #E6E6E6;
+}
+
+
+@media (min-width: 40em) {
+        .masthead {
+        position: fixed;
+        top: 0;
+    }
+
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 100%;
+        height: 142px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 970px !important;
+    }
+}
+
+.top {
+    font-size: 11pt;
+    padding: 10px;
+}
+
+.top b {
+    color: #00aaff;
+}
+
+.top a {
+    font-size: initial;
+    color: #002882;
+}
+
+.login_label {
+    text-align: left;
+    font-size: 16px;
+    color: #002882;
+}
+
+.footer-cell {
+    position: fixed;
+    color: #002882;
+    display: table-cell;
+    font-family: Calibri;
+    font-size: 12px;
+}
+
+.winlogin_auth #capsIndicator {
+    position: absolute;
+}
+
+.phoneNumber {
+    font-size: 16px;
+}
+
+.column {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.com-md-3 {
+    background-color: white;
+}
+
+.white {
+    background-color: white;
+}
+
+.curRates {
+    text-align: left;
+    background: transparent url("/reference/kz/img/head/bordersmall.gif") no-repeat center right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.language {
+    height: 24px;
+    cursor: pointer;
+    width: 30px;
+}
+
+div.language {
+    color: #00A9FF;
+    font-size: 16px;
+    font-weight: 600;
+    float: left;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div.curRates {
+    color: #00A9FF;
+}
+
+.language.current {
+    color: #E62632;
+    text-decoration: none;
+    cursor: default;
+}
+
+#lang {
+    min-width: 100px;
+    position: absolute;
+}
+
+input.input, input.inputact {
+    background-color: white;
+    border: 2px solid #00A9FF;
+    height: 27px !important;
+    width: 212px !important;
+    padding: 3px !important;
+    border-radius: 3px;
+}
+
+#submitButton {
+    background: none repeat scroll 0 0 #E62632;
+    border: 1px solid #E62632;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+    height: 35px;
+    text-transform: uppercase;
+    font-family: Arial, bold;
+    width: 130px;
+}
+
+.tooltips {
+    background: none repeat scroll 0 0 #E62632;
+    border-radius: 3px;
+    color: #FFF;
+    height: auto;
+    left: 230px;
+    line-height: 27px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: auto;
+    min-width: 400px;
+    z-index: 2;
+}
+
+.tooltips:after {
+    border-bottom: 8px solid transparent;
+    border-right: 5px solid #E62632;
+    border-top: 8px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 100%;
+    top: 6px;
+    width: 0;
+}
+
+div.login * {
+    font-family: Verdana, Tahoma, Arial, serif !important;
+}
+
+.logo {
+    position: relative;
+    left: 28px;
+    top: 7px;
+    z-index: 1;
+}
+
+.logo img {
+    height: 59px;
+    width: 170px;
+}
+
+.winlogin .input, .winlogin .inputact {
+    width: 190px !important;
+}
+
+.currency-info {
+    padding-top: 40px;
+    color: #00A9FF;
+    font-size: 16px;
+}
+
+.currCode {
+    font-weight: 600;
+}
+
+.keyboardInputInitiator {
+    margin: 0;
+    position: absolute;
+    right: 262px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.news {
+    color: #002882;
+}
+
+.news-title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.right-panel {
+    position: relative;
+    z-index: 1;
+    top: 30px;
+}
+
+#forgotPassword {
+    border: none;
+    background: none;
+    color: #00a9ff;
+    cursor: pointer;
+    text-decoration: underline;
+
+    font-family: Arial, bold;
+    font-size: 16px;
+    text-shadow: none;
+}
