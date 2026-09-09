@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="kk" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="/reference/kz/css/login.css">
+    <link rel="icon" type="image/x-icon" href="/reference/kz/img/new/favicon.ico">
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/reference/kz/css/keyboard.css">
+
+    <link rel="stylesheet" type="text/css" href="/reference/kz/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'; form-action 'self'; object-src 'none'"></head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="top" style="text-align: left;">
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/kz/security_notes_kz.pdf">Қауіпсіздік бойынша жаднама</a>
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/kz/software_kz.html">Бағдарламалық жасақтама</a>
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/kz/instruction_kz.html">Нұсқаулық</a>
+        <b>&#8226;</b>
+        <a href="#">Демо нұсқасы</a>
+    </div>
+</div>
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+        <div class="inner cover">
+            <!--table-->
+            <div class="container">
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 15px;">
+
+                        </div>
+                        <div class="logo">
+                            <img src="/reference/kz/img/new/logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 white"></div>
+                    <div class="col-md-3 white right-panel" align="center" style="position: relative">
+                        <div id="lang" align="right">
+                            <div class="language ru">ru</div><div class="language en">en</div><div class="language kz current" >kz</div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="info-box">
+                            <div class="curRates" id="curRates">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 10px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white login_label">Пайдаланушы</div>
+                    <div class="col-md-3 white login_label">Пароль</div>
+                    <div class="col-md-3 white"></div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 20px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white" align="left">
+                        <input id="userName" class="input"
+                               type="text">
+                    </div>
+                    <div class="col-md-6 white" align="left">
+                        <input
+                                id="password"
+                                class="input"
+                                value=""
+                                type="password">
+                        <img src="/reference/kz/img/logon/keyboard.png" class="keyboardInputInitiator" role="button" tabindex="0" alt="Отобразить виртуальную клавиатуру" id="localKeyboardButton">
+                        <div class="tooltips" id="errorFrame"
+                             style="display:none;">
+                            <div class="errmsg"><span
+                                    id="errorMessage"></span></div>
+                        </div>
+                        <span style="visibility:hidden;"
+                              id="capsIndicator">
+                            <b style="color:red">
+                                Caps Lock пернесі басылды
+                            </b>
+                        </span>
+                        <br>
+                    </div>
+                </div>
+                <div class="row column" id="divUnlockButton">
+                    <div class="col-md-12 white" style="padding: 12px;"></div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-6 white">
+                        <div style="padding: 25px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white" style="text-align: right">
+                        <button type="button" id="submitButton" class="btn">
+                            Кіру
+                        </button>
+                    </div>
+                    <div class="col-md-3 white" style="text-align: center">
+                        <button type="button" id="forgotPassword">
+                            Құпия сөзді ұмыттыңыз ба?
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="com-md-12">
+                        <div style="padding: 25px;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center">
+                        <table class='news_table'><tbody><tr><td><div class='news'><div class='date'>05.06.2026</div><div class='news-title'>ЗТ ИБ ЖАҢА ҚЫЗМЕТ: Ресей Федерациясындағы мереке күндері өз шоттары арасындағы рубльмен аударымдар.</div><div class='text'>
+<p>Құрметті клиенттер!
+Біз ЗТ ИБ жүйесінің мүмкіндіктері кеңейтілгенін қуана хабарлаймыз. Енді сіз Ресей Федерациясындағы ресми мереке күндері де өз шоттарыңыз арасында (салымдарды толықтыру және қаражатты ішінара алуды қоса алғанда) Ресей рублімен аударымдар жасай аласыз.
+Маңызды жағдайға назар аударыңыз: Егер Ресейдегі мереке күні Қазақстандағы демалыс немесе мереке күнімен сәйкес келсе, бұл аударымдар қол жетімді болмайды, өйткені оларды жүргізу үшін валюталық бақылау қызметінің жұмысы қажет.
+Бұл қалай жұмыс істейді (мысалдар бойынша):
+•	12 маусым (Ресей Федерациясындағы мереке, бірақ ҚР-дағы жұмыс күні) - шоттар арасындағы аударымдар рубльмен қол жетімді.
+•	1 мамыр (Ресей Федерациясында да, ҚР-да да мереке) - өз шоттары арасында рубльмен аударымдар қол жетімді емес.
+Ресей Федерациясының мереке күндері рубльдік операциялардың қалған тәртібі өзгеріссіз қалады. Жаңа функционал іске қосылды және ЗТ ИБ жүйесінде қол жетімді.</p>
+<p>Құрметпен, Банк ВТБ (Қазақстан) АҚ ЕҰ</p></div></div></td></tr><tr><td><div class='news'><div class='date'>29.05.2026</div><div class='news-title'>Онлайн-шоттарды ашуды тоқтата тұру</div><div class='text'>
+<p>Құрметті клиенттер! Шоттарды қашықтан ашу уақытша қол жетімді емес. Клиенттерді тиісті түрде тексеру жөніндегі заңнаманың жаңа талаптарына байланысты біз жаңартылған биометриялық верификация жүйесін енгіземіз. Шот, салым немесе карта ашу үшін Банктің кез келген бөлімшесіне хабарласыңыз. Қолайсыздық үшін кешірім сұраймыз!</p></div></div></td></tr><tr><td><div class='news'><div class='date'>24.04.2026</div><div class='news-title'>ЗТ ИБ-тегі ЖАҢА ҚЫЗМЕТ: Банктік шоттан қолма-қол ақшаны алуға/беруге өтінім</div><div class='text'>
+<p>Құрметті, Клиенттер!</p>
+<p>Сіздерге «ЗТ үшін Интернет – банк» - «Банктік шоттан қолма-қол ақша алуға/беруге өтінім» жүйесінде жаңа сервистің іске асырылғаны туралы хабарлауға қуаныштымыз.</p>
+<p>Жаңа қызмет сізге ЗТ ИБ жүйесі арқылы банктік шоттан қолма-қол ақша алуға/беруге өтініш беруге мүмкіндік береді.
+Өтінім алдын ала толтырылған деректермен әзірленген, сондықтан сізге тек екі өрісті қолмен толтыру қажет - берілген күні және алуға жоспарланған ақша сомасы.
+Банктік шоттан қолма-қол ақша алуға/беруге Өтінімді толтыру жөніндегі пайдаланушы нұсқаулығы қоса беріледі:</p>
+<p>Қызмет 2026 жылдың 24 сәуірінен бастап қол жетімді.</p>
+<p>Құрметпен,</p>
+<p>Банк ВТБ (Қазақстан) АҚ ЕҰ </p>
+<p><a href="https://ib.vtb-bank.kz/kz/news/res/019dce9b-c72e-16d0-8ca8-6fc3c8a60bc5/%D0%91%D0%B0%D0%BD%D0%BA%D1%82%D1%96%D0%BA_%D1%88%D0%BE%D1%82%D1%82%D0%B0%D0%BD_%D2%9B%D0%BE%D0%BB%D0%BC%D0%B0-%D2%9B%D0%BE%D0%BB_%D0%B0%D2%9B%D1%88%D0%B0%D0%BD%D1%8B_%D0%B0%D0%BB%D1%83%D2%93%D0%B0-%D0%B1%D0%B5%D1%80%D1%83%D0%B3%D0%B5_%D3%A9%D1%82%D1%96%D0%BD%D1%96%D0%BC.docx" target="_blank" title="019dce9b-c72e-16d0-8ca8-6fc3c8a60bc5/Банктік шоттан қолма-қол ақшаны алуға-беруге өтінім.docx">Банктік шоттан қолма-қол ақшаны алуға-беруге өтінім.docx</a>
+</p></div></div></td></tr><tr><td><div class='news'><div class='date'>24.04.2026</div><div class='news-title'>ЗТ ИБ ЖАҢА ҚЫЗМЕТ: Ресей Федерациясына кедендік төлемдерді төлеу</div><div class='text'>
+<p>Құрметті Клиенттер!</p>
+<p>Сіздерге «ЗТ үшін Интернет-банк» - «Ресей Федерациясына кедендік төлемдерді төлеу» жүйесінде жаңа сервисті іске асыру туралы хабарлауға қуаныштымыз.</p>
+<p>Жаңа процесс РФ-ғы кедендік төлемдерді «Кедендік кодты» көрсете отырып төлеуге мүмкіндік береді, егер «Бюджеттік жіктеу коды» </p>
+<p>«153....» - тен басталса, көрсетіледі. Пысықтау өтініш түрінде жүзеге асырылды – «РФ-ның бюджетіне салық төлеу».</p>
+<p>РФ-да «ЗТ үшін Интернет-банк» жүйесінде Кедендік төлемдерді төлеу бойынша пайдаланушы нұсқаулығы қоса беріледі:</p>
+<p>Ресей Федерациясына кедендік төлемдерді төлеу 2026 жылдың 24 сәуірінен бастап қол жетімді.</p>
+<p>Құрметпен,</p>
+<p>Банк ВТБ (Қазақстан) АҚ ЕҰ </p>
+<p><a href="https://ib.vtb-bank.kz/kz/news/res/019dcea3-610e-191f-83e4-be821a214062/%D0%97%D0%A2_%D0%90%D2%9A_%D0%B6%D2%AF%D0%B9%D0%B5%D1%81%D1%96%D0%BD%D0%B4%D0%B5%D0%B3%D1%96_%C2%AB%D0%A0%D0%A4-%D2%93%D1%8B_%D0%BA%D0%B5%D0%B4%D0%B5%D0%BD%D0%B4%D1%96%D0%BA_%D1%82%D3%A9%D0%BB%D0%B5%D0%BC%D0%B4%D0%B5%D1%80%D0%B4%D1%96_%D1%82%D3%A9%D0%BB%D0%B5%D1%83%C2%BB_%D0%BF%D0%B0%D0%B9%D0%B4%D0%B0%D0%BB%D0%B0%D0%BD%D1%83%D1%88%D1%8B_%D0%BD%D2%B1%D1%81%D2%9B%D0%B0%D1%83%D0%BB%D1%8B%D2%93%D1%8B.docx" target="_blank" title="019dcea3-610e-191f-83e4-be821a214062/ЗТ АҚ жүйесіндегі «РФ-ғы кедендік төлемдерді төлеу» пайдаланушы нұсқаулығы.docx">ЗТ АҚ жүйесіндегі «РФ-ғы кедендік төлемдерді төлеу» пайдаланушы нұсқаулығы.docx</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>13.03.2024</div><div class='news-title'>ЗТ үшін тарифтердің өзгеруі туралы</div><div class='text'>
+<p>Банк ВТБ (Қазақстан) осы арқылы өзгерістер мен толықтыруларды ескере отырып, Банк Басқармасы бекіткен (2021 жылғы 10 наурыздағы № 16 хаттама) (заңды тұлғалар және олардың оқшауланған бөлімшелері (филиалдары, өкілдіктері) үшін) Ағымдағы шотты ашу туралы қосылу шартының (бұдан әрі – Шарт) 1.7-тармағына сәйкес осы Шартқа қосылған және оның талаптары бойынша ағымдағы шоттар ашқан банк клиенттерін 2024 жылғы 01 сәуірден бастап Шарт шеңберінде көрсетілетін төлем қызметтері бойынша банк тарифтерінің мөлшерінің өзгеретіні туралы хабардар етеді.</p>
+<p><a href="https://ib.vtb-bank.kz/kz/news/res/018e3c59-4b9f-1447-87ce-1e90e7556904/%D0%97%D0%A2_%D2%AF%D1%88%D1%96%D0%BD_%D1%82%D0%B0%D1%80%D0%B8%D1%84%D1%82%D0%B5%D1%80%D0%B4%D1%96%D2%A3_%D3%A9%D0%B7%D0%B3%D0%B5%D1%80%D1%83%D1%96_%D1%82%D1%83%D1%80%D0%B0%D0%BB%D1%8B.pdf" target="_blank" title="018e3c59-4b9f-1447-87ce-1e90e7556904/ЗТ үшін тарифтердің өзгеруі туралы.pdf">ЗТ үшін тарифтердің өзгеруі туралы.pdf</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>09.01.2024</div><div class='news-title'>Құрметті клиенттер!</div><div class='text'>
+<p>Банк ВТБ (Қазақстан) осы арқылы өзгерістер мен толықтыруларды ескере отырып, Банк Басқармасы бекіткен (2021 жылғы 10 наурыздағы № 16 хаттама) (жеке кәсіпкерлер, адвокаттар, нотариустар, жеке сот орындаушылары, шаруа (фермер) қожалықтары, кәсіби медиаторлар үшін) ағымдағы шотты ашу туралы қосылу шартының (бұдан әрі – Шарт) 1.8-тармағына сәйкес осы Шартқа қосылған және оның талаптары бойынша ағымдағы шоттар ашқан Банк клиенттерін 2024 жылғы 22 қаңтардан бастап Шарт шеңберінде көрсетілетін төлем қызметтері бойынша Банк тарифтерінің мөлшерінің өзгеретіні туралы хабардар етеді.</p>
+<p><a href="https://ib.vtb-bank.kz/kz/news/res/018ced15-778c-1a2b-8202-8bd78d7cff38/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%98%D0%9F_KZ.pdf" target="_blank" title="018ced15-778c-1a2b-8202-8bd78d7cff38/Объявление для клиентов ИП KZ.pdf">Объявление для клиентов ИП KZ.pdf</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>08.01.2024</div><div class='news-title'>Құрметті клиенттер!</div><div class='text'>
+<p>Банк ВТБ (Қазақстан) осы арқылы өзгерістер мен толықтыруларды ескере отырып, Банк Басқармасы бекіткен (2021 жылғы 10 наурыздағы № 16 хаттама) (заңды тұлғалар және олардың оқшауланған бөлімшелері (филиалдары, өкілдіктері) үшін) Ағымдағы шотты ашу туралы қосылу шартының (бұдан әрі – Шарт) 1.7-тармағына сәйкес осы Шартқа қосылған және оның талаптары бойынша ағымдағы шоттар ашқан банк клиенттерін 2024 жылғы 22 қаңтардан бастап Шарт шеңберінде көрсетілетін төлем қызметтері бойынша банк тарифтерінің мөлшерінің өзгеретіні туралы хабардар етеді.</p>
+<p><a href="https://ib.vtb-bank.kz/kz/news/res/018ced19-6217-1d28-812c-4258684634b6/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%AE%D0%9B_KZ.pdf" target="_blank" title="018ced19-6217-1d28-812c-4258684634b6/Объявление для клиентов ЮЛ KZ.pdf">Объявление для клиентов ЮЛ KZ.pdf</a></p></div></div></td></tr></tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover-container">
+            <div class="mastfoot">
+                <div class="footer-cell" style="width: 100%" align="center">
+                    <div>
+                        <div align="center" style="width: 970px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div align="left">
+                                        ҚБҚКЖ пайдаланушыларын телефон арқылы қолдау көрсету тобы:
+                                        <br>
+                                        <div class="phoneNumber">
+                                            +7(727)330-67-67
+                                        </div>
+                                        (Алматы қаласы бойынша қалалық нөмірлерден тегін)
+                                        <br>
+                                        <div class="phoneNumber">
+                                            +7-702-017-67-67
+                                        </div>
+                                        ұялы байланыс оператордың тарифтеріне сәйкес
+                                        <br>
+                                        e-mail: onlineservice@vtb-bank.kz
+                                        <br>
+                                        ұсыныстарға арналған e-mail: proposal@vtb-bank.kz
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div align="right" >
+                                        <span>© «Банк ВТБ Қазақстан» АҚ ЕҰ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<div id="modalMask" style="z-index: 1800; background: none repeat scroll 0 0 #E0E1E3; top: 0; left: 0; height: 100%; width: 100%;
+    opacity: 0; position: absolute; display: none;"></div>
+
+
+<!--[if lt IE 9 ]>
+
+<![endif]-->
+
+
+
+
+
+
+
+
+<noscript>
+    <div class="noscript"><p>Sorry, JavaScript must be enabled.<br/>Change your browser options, then <a href="">try
+        again</a>.</p></div>
+</noscript>
+<script src="/login/local.js" defer></script></body>
+</html>

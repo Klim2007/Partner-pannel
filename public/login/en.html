@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="/reference/en/css/login.css">
+    <link rel="icon" type="image/x-icon" href="/reference/en/img/new/favicon.ico">
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/reference/en/css/keyboard.css">
+
+    <link rel="stylesheet" type="text/css" href="/reference/en/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'; form-action 'self'; object-src 'none'"></head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="top" style="text-align: left;">
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/en/security_notes_en.pdf">Safety card</a>
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/en/software_en.html">Software</a>
+        <b>&#8226;</b>
+        <a href="https://ib.vtb-bank.kz/doc/en/instruction_en.html">Instructions</a>
+        <b>&#8226;</b>
+        <a href="#">Demo version</a>
+    </div>
+</div>
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+        <div class="inner cover">
+            <!--table-->
+            <div class="container">
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 15px;">
+
+                        </div>
+                        <div class="logo">
+                            <img src="/reference/en/img/new/logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6 white"></div>
+                    <div class="col-md-3 white right-panel" align="center" style="position: relative">
+                        <div id="lang" align="right">
+                            <div class="language ru">ru</div><div class="language en current" >en</div><div class="language kz">kz</div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="info-box">
+                            <div class="curRates" id="curRates">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 10px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white login_label">Username</div>
+                    <div class="col-md-3 white login_label">Password</div>
+                    <div class="col-md-3 white"></div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-3 white">
+                        <div style="padding: 20px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white" align="left">
+                        <input id="userName" class="input"
+                               type="text">
+                    </div>
+                    <div class="col-md-6 white" align="left">
+                        <input
+                                id="password"
+                                class="input"
+                                value=""
+                                type="password">
+                        <img src="/reference/en/img/logon/keyboard.png" class="keyboardInputInitiator" role="button" tabindex="0" alt="Отобразить виртуальную клавиатуру" id="localKeyboardButton">
+                        <div class="tooltips" id="errorFrame"
+                             style="display:none;">
+                            <div class="errmsg"><span
+                                    id="errorMessage"></span></div>
+                        </div>
+                        <span style="visibility:hidden;"
+                              id="capsIndicator">
+                            <b style="color:red">
+                                Password is case-sensitive
+                            </b>
+                        </span>
+                        <br>
+                    </div>
+                </div>
+                <div class="row column" id="divUnlockButton">
+                    <div class="col-md-12 white" style="padding: 12px;"></div>
+                </div>
+                <div class="row column">
+                    <div class="col-md-6 white">
+                        <div style="padding: 25px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 white" style="text-align: right">
+                        <button type="button" id="submitButton" class="btn">
+                            Log In
+                        </button>
+                    </div>
+                    <div class="col-md-3 white" style="text-align: center">
+                        <button type="button" id="forgotPassword">
+                            Forgot your password?
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="com-md-12">
+                        <div style="padding: 25px;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center">
+                        <table class='news_table'><tbody><tr><td><div class='news'><div class='date'>05.06.2026</div><div class='news-title'>NEW SERVICE IN CORPORATE INTERNET BANKING: Ruble transfers between own accounts during official holidays in the Russian Federation.</div><div class='text'>
+<p>Dear Clients!
+We are pleased to inform you that the capabilities of our Corporate Internet Banking system have been expanded. You can now execute transfers in Russian Rubles between your own accounts (including deposit top-ups and partial withdrawals) even during official public holidays in the Russian Federation.
+Please note an important condition: If a public holiday in Russia coincides with a weekend or a public holiday in Kazakhstan, these transfers will not be available, as they require the operation of the currency control department.
+How it works (Examples):
+•	June 12 (a holiday in the Russian Federation, but a business day in the Republic of Kazakhstan) — transfers between own accounts in Rubles are available.
+•	May 1 (a holiday in the Russian Federation and the Republic of Kazakhstan) — transfers between own accounts in Rubles are not available.
+The processing procedure for all other Ruble transactions during Russian holidays remains unchanged. This new feature is already live and available in your Corporate Internet Banking System.
+Best regards, Subsidiary JSC VTB Bank (Kazakhstan)</p></div></div></td></tr><tr><td><div class='news'><div class='date'>29.05.2026</div><div class='news-title'>Suspension of online account openings</div><div class='text'>
+<p>Dear Customers! Remote account opening is temporarily unavailable. We are implementing an updated biometric verification system due to new legal requirements regarding customer due diligence. We kindly ask you to visit any branch of the Bank to open an account, deposit, or card. We apologize for any inconvenience!</p></div></div></td></tr><tr><td><div class='news'><div class='date'>24.04.2026</div><div class='news-title'>NEW SERVICE IN THE INTERNET BANKING for LEGAL ENTITIES (IBLE): Request for withdrawal/disbursement of cash from a bank account</div><div class='text'>
+<p>Dear Customers!</p>
+<p>We are pleased to inform you about the launch of a new service in the &#34;Internet Banking for Legal Entities&#34; system: &#34;Request for Withdrawal/Disbursement of Cash from a Bank Account.&#34;</p>
+<p>This new service allows you to submit a Request for withdrawal/disbursement of cash from a bank account via the IBLE system.
+The request form is pre-filled with data, so you only need to manually fill in two fields: the date of withdrawal and the amount of money you plan to withdraw.
+User guide for filling out the Application for Withdrawal/Disbursement of Cash from a Bank Account is attached:</p>
+<p>The service is available starting April 24, 2026.</p>
+<p>Sincerely yours,</p>
+<p>VTB Bank (Kazakhstan) JSC</p>
+<p><a href="https://ib.vtb-bank.kz/en/news/res/Application_for_Withdrawal-Disbursement_of_Cash_from_a_Bank_Account_in_the_IBLE_system.docx" target="_blank" title="Application for Withdrawal-Disbursement of Cash from a Bank Account in the IBLE system.docx">Application for Withdrawal-Disbursement of Cash from a Bank Account in the IBLE system.docx</a>
+</p></div></div></td></tr><tr><td><div class='news'><div class='date'>24.04.2026</div><div class='news-title'>NEW SERVICE IN THE IB for LE: Payment of Customs Duties to the Russian Federation</div><div class='text'>
+<p>Dear Customers!</p>
+<p>We are pleased to inform you about launching of a new service in the “Internet Banking for Legal Entities” system: “Payment of Customs Duties to the Russian Federation”.</p>
+<p>This new process allows you to pay customs duties to the Russian Federation by specifying the “Customs Code”, which is displayed if the “Budget Classification Code” begins with  
+“153....”. This update has been implemented in the form of an application titled “Payment of Tax to the Russian Federation Budget”.
+User guide for paying customs duties to the Russian Federation in the “Internet Banking for Legal Entities” system is attached:</p>
+<p>Payment of customs duties to the Russian Federation is available starting from April 24, 2026.
+Sincerely yours,</p>
+<p>Subsidiary JSC VTB Bank (Kazakhstan)</p>
+<p><a href="https://ib.vtb-bank.kz/en/news/res/019dcea5-a703-17c0-8c94-c9cb657b6cfb/Payment_of_Customs_Duties_to_the_Russian_Federation.docx" target="_blank" title="019dcea5-a703-17c0-8c94-c9cb657b6cfb/Payment of Customs Duties to the Russian Federation.docx">Payment of Customs Duties to the Russian Federation.docx</a>
+</p></div></div></td></tr><tr><td><div class='news'><div class='date'>13.03.2024</div><div class='news-title'>About change of tariffs for legal entities on</div><div class='text'>
+<p>VTB Bank (Kazakhstan) hereby in accordance with clause 1.7. of the Adhesion Contract on opening a current account (for legal entities and their separate subdivisions (branches, representative offices)), approved by the Management Board of the Bank (Minutes No.16 dated March 10, 2021), subject to amendments and supplements (hereinafter referred to as the Contract), notifies the bank&#39;s customers who have joined this Contract and opened current accounts on its terms and conditions, of changes in the bank&#39;s tariffs for payment services rendered under the Contract from April 01, 2024.</p>
+<p><a href="https://ib.vtb-bank.kz/en/news/res/018e3c5a-3bce-16b6-93a0-3ca139d59e7b/About_change_of_tariffs_for_legal_entities_on.pdf" target="_blank" title="018e3c5a-3bce-16b6-93a0-3ca139d59e7b/About change of tariffs for legal entities on.pdf">About change of tariffs for legal entities on.pdf</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>09.01.2024</div><div class='news-title'>Dear customers!</div><div class='text'>
+<p>VTB Bank (Kazakhstan) hereby in accordance with clause 1.7. of the Adhesion Contract on opening a current account (for legal entities and their separate subdivisions (branches, representative offices)), approved by the Management Board of the Bank (Minutes No.16 dated March 10, 2021), subject to amendments and supplements (hereinafter referred to as the Contract), notifies the bank&#39;s customers who have joined this Contract and opened current accounts on its terms and conditions, of changes in the bank&#39;s tariffs for payment services rendered under the Contract from January 22, 2024.</p>
+<p><a href="https://ib.vtb-bank.kz/en/news/res/018ced17-a3e9-1eb3-a3dd-472059bfa5c3/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%AE%D0%9B_EN.pdf" target="_blank" title="018ced17-a3e9-1eb3-a3dd-472059bfa5c3/Объявление для клиентов ЮЛ EN.pdf">Объявление для клиентов ЮЛ EN.pdf</a></p></div></div></td></tr><tr><td><div class='news'><div class='date'>08.01.2024</div><div class='news-title'>Dear customers!</div><div class='text'>
+<p>VTB Bank (Kazakhstan) hereby in accordance with clause 1.8. of the Adhesion Contract on opening a current account (for individual entrepreneurs, lawyers, notaries, private bailiffs, peasant (farming) households, professional mediators), approved by the Management Board of the Bank (Minutes No.16 dated March 10, 2021), subject to amendments and supplements (hereinafter referred to as the Contract), notifies the Bank&#39;s customers who have joined this Contract and opened current accounts on its terms and conditions, of changes in the Bank&#39;s tariffs for payment services rendered under the Contract from January 22, 2024.</p>
+<p><a href="https://ib.vtb-bank.kz/en/news/res/018ced16-913e-1299-b595-aa193a6e7645/%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%98%D0%9F_EN.pdf" target="_blank" title="018ced16-913e-1299-b595-aa193a6e7645/Объявление для клиентов ИП EN.pdf">Объявление для клиентов ИП EN.pdf</a></p></div></div></td></tr></tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover-container">
+            <div class="mastfoot">
+                <div class="footer-cell" style="width: 100%" align="center">
+                    <div>
+                        <div align="center" style="width: 970px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div align="left">
+                                        Support team of RBS system users by:
+                                        <br>
+                                        <div class="phoneNumber">
+                                            +7(727)330-67-67
+                                        </div>
+                                        (Free from landline phones in Almaty c.)
+                                        <br>
+                                        <div class="phoneNumber">
+                                            +7-702-017-67-67
+                                        </div>
+                                        (according to the tariffs of mobile network operators)
+                                        <br>
+                                        e-mail: onlineservice@vtb-bank.kz
+                                        <br>
+                                        e-mail for offers: proposal@vtb-bank.kz
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div align="right" >
+                                        <span>© Subsidiary VTB Bank JSC (Kazakhstan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<div id="modalMask" style="z-index: 1800; background: none repeat scroll 0 0 #E0E1E3; top: 0; left: 0; height: 100%; width: 100%;
+    opacity: 0; position: absolute; display: none;"></div>
+
+
+<!--[if lt IE 9 ]>
+
+<![endif]-->
+
+
+
+
+
+
+
+
+<noscript>
+    <div class="noscript"><p>Sorry, JavaScript must be enabled.<br/>Change your browser options, then <a href="">try
+        again</a>.</p></div>
+</noscript>
+<script src="/login/local.js" defer></script></body>
+</html>
