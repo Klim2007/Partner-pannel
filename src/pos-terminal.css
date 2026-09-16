@@ -1,0 +1,18 @@
+.pos-page{padding-bottom:64px}
+.pos-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:start}
+.pos-copy{min-width:0}
+.pos-visual{position:sticky;top:24px;min-width:0}
+.pos-hero{margin-bottom:0}
+.pos-hero h1{font-size:40px;line-height:1.2;margin:0 0 48px;letter-spacing:-.5px}
+.pos-hero h2{font-size:20px;line-height:1.4;color:#173966;margin:0 0 10px;font-weight:600}
+.pos-hero p,.pos-section p,.pos-section li{font-size:18px;line-height:1.55;color:#526984}
+.pos-terminal-image{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:12px;margin-top:6px}
+.pos-connect,.pos-notification button{background:#064eaa;color:#fff;border:0;border-radius:7px;font-size:18px;line-height:1.4;padding:17px 24px;margin-top:36px}
+.pos-connect:hover,.pos-notification button:hover{background:#003f90}
+.pos-section{margin-top:56px}.pos-section h2{font-size:30px;font-weight:600;line-height:1.3;color:#173966;margin:0 0 38px}
+.pos-section ul{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:16px}.pos-section li{padding-left:25px;position:relative}.pos-section li::before{content:'—';position:absolute;left:0}
+.pos-documents{background:none;border:0;padding:0;color:#008bc7;font-size:18px;margin-top:32px;text-align:left}.pos-documents:hover{text-decoration:underline}
+.pos-contracts>div{padding:30px 34px;background:#edf2f9;border:1px solid #e2e9f3;border-radius:12px;display:grid;gap:24px}
+.pos-notification{border:1px solid #d8e5f1;border-radius:14px;padding:32px;max-width:min(460px,calc(100vw - 32px));color:#173966;box-shadow:0 16px 60px #163b7333}.pos-notification::backdrop{background:#081c3a66}.pos-notification p{font-size:20px;line-height:1.5;margin:0}.pos-notification button{margin-top:24px;font-size:16px;padding:10px 20px}
+@media(max-width:800px){.pos-layout{grid-template-columns:1fr;gap:28px}.pos-visual{position:static;grid-row:1}.pos-terminal-image{margin-top:0}}
+@media(max-width:800px){.pos-hero{grid-template-columns:1fr;gap:28px;margin-bottom:40px}.pos-hero h1{font-size:32px;margin-bottom:26px}.pos-hero h2{font-size:19px}.pos-terminal-image{max-height:360px;object-fit:contain}.pos-section{margin-top:40px}.pos-section h2{font-size:26px;margin-bottom:24px}.pos-hero p,.pos-section p,.pos-section li{font-size:16px}.pos-contracts>div{padding:22px}.pos-connect{font-size:16px}.pos-documents{font-size:16px}}

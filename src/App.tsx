@@ -1,5 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
-import {ArrowUpRight,ArrowRight,ChevronRight,LogOut,Check,MessageCircle,Send,X,RotateCcw,Headphones,ShieldCheck,LoaderCircle} from 'lucide-react';
+import {ArrowUpRight,ArrowRight,LogOut,Check,MessageCircle,Send,X,RotateCcw,Headphones,ShieldCheck,LoaderCircle} from 'lucide-react';
+import BankNavigation from './BankNavigation';
 import {api,catalog} from './api';
 import type {Service,Contact,ChatMessage,AssistantReply} from '../shared/types';
 
@@ -54,7 +55,7 @@ export default function App(){
  async function logout(){try{await api.logout();location.assign('/login/ru.html');}catch{setError('Не удалось завершить сессию. Повторите выход.');}}
  return <div className="app-shell">
   <header className="app-header"><a className="brand" href="/panel" aria-label="VTB Business"><img src="/reference/ru/img/new/logo.png" alt="VTB"/><span>БИЗНЕС</span></a><div className="header-right"><span className="user-avatar">К</span><span className="username">klim</span><button className="logout" onClick={logout} aria-label="Выйти"><LogOut size={19}/></button></div></header>
-  <main className="main-content"><div className="breadcrumb"><span>VTB Business</span><ChevronRight size={13}/><span>Продукты и услуги</span><ChevronRight size={13}/><strong>Партнёрские сервисы</strong></div>
+  <main className="main-content"><BankNavigation current="panel"/>
    <section className="page-intro"><div><div className="eyebrow"><span/>БОЛЬШЕ ВОЗМОЖНОСТЕЙ ДЛЯ БИЗНЕСА</div><h1>Программы партнеров<br/>для вашего бизнеса</h1><p>Полезные сервисы для ежедневных задач и новых возможностей.</p></div><div className="intro-note"><span>Всё необходимое</span><strong>в одном месте<ArrowUpRight size={23}/></strong><small>Выбирайте. Знакомьтесь. Подключайте.</small></div></section>
    <div className="section-heading"><h2>Сервисы для вашего бизнеса <span>{services.length||6}</span></h2><span className="hover-note">Наведите на изображение, чтобы узнать условия</span></div>
    {loading?<div className="loading" role="status"><LoaderCircle/>Загружаем сервисы…</div>:error?<div className="load-error" role="alert"><p>{error}</p><button onClick={load}>Повторить загрузку</button></div>:services.length===0?<p className="loading">Сервисы пока не добавлены.</p>:<div className="services-grid">{services.map(s=><ServiceCard key={s.id} service={s}/>)}</div>}
