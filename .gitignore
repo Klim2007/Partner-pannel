@@ -9,3 +9,7 @@ test-results/
 playwright-report/
 *.pptx
 Front page 1.txt
+
+# Локальные рабочие материалы банка — не публиковать (BT, граница данных)
+/*.pdf
+/*eqiring*.txt

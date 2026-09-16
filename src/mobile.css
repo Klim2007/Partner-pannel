@@ -1,0 +1,50 @@
+.shared-bank-nav .mobile-navigation-toggle{display:none}
+@media(max-width:800px){
+ html{scroll-padding-top:16px}
+ .app-header{padding:0 16px;gap:12px}.brand{gap:12px}.brand span{padding-left:12px}
+ .main-content{padding:0 16px;max-width:100%}
+ .shared-bank-nav{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:4px 12px;min-width:0;font-size:13px;height:auto;overflow:visible;white-space:normal}
+ .main-content>.shared-bank-nav{margin:16px 0 24px}
+ .shared-bank-nav .mobile-navigation-toggle{display:flex;align-items:center;min-height:44px;font-size:16px!important;text-align:left}
+ .shared-bank-nav:not(.mobile-open)>:not(.mobile-navigation-toggle){display:none}
+ .shared-bank-nav>a,.shared-bank-nav>button,.shared-bank-nav>span{padding:12px 4px;min-height:44px;display:flex;align-items:center;margin:0}
+ .shared-bank-nav .products-navigation{display:block;align-self:stretch;min-width:0}
+ .shared-bank-nav .products-trigger{padding:12px 4px;min-height:44px;width:100%;text-align:left}
+ .shared-bank-nav .products-dropdown,.shared-bank-nav .products-submenu{position:static;min-width:0;width:100%;max-width:none;box-shadow:none}
+ .shared-bank-nav .products-row>button,.shared-bank-nav .products-submenu>button,.shared-bank-nav .products-submenu>a{font-size:14px!important;white-space:normal;min-height:44px;padding:10px 12px;max-width:none}
+ .shared-bank-nav .products-submenu>button,.shared-bank-nav .products-submenu>a{padding-left:24px}
+ .navigation-notice,.bank-notice{width:calc(100% - 24px);max-width:480px;bottom:max(12px,env(safe-area-inset-bottom));padding:14px}
+ .navigation-notice button,.bank-notice button{min-width:44px;min-height:44px}
+ .bank-top{height:auto;min-height:76px;flex-wrap:wrap;padding:12px;gap:10px}
+ .bank-date{font-size:11px;width:auto;margin-left:auto;padding:0}
+ .bank-company{order:2;flex-basis:100%;height:auto;min-height:30px;font-size:12px;padding:7px;overflow-wrap:anywhere}
+ .bank-top button{min-width:36px;min-height:36px;font-size:18px}
+ .bank-content{padding:0 12px}.bank-block{margin-top:20px;min-width:0}
+ .bank-block>header{min-height:44px;flex-wrap:wrap;gap:8px}.bank-block h2{font-size:20px;line-height:1.4}
+ .bank-collapse{width:32px;height:32px;font-size:20px!important;line-height:26px!important}
+ .bank-toolbar{flex-wrap:wrap;padding:8px 0;gap:8px}.bank-button{font-size:12px!important;padding:10px 12px;min-height:44px;white-space:normal}
+ .bank-pages{font-size:12px;flex-wrap:wrap;gap:6px;min-height:44px}.bank-pages button{min-width:36px;height:36px;line-height:36px}
+ .bank-home table{font-size:12px;min-width:1100px}.bank-home th{padding:8px;height:auto}.bank-home td{padding:9px 8px;height:44px}
+ .bank-table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+ .bank-home th:nth-child(n){width:auto}.bank-home th:first-child{width:165px}.bank-home th:nth-child(2){width:80px}.bank-home th:last-child{width:220px}
+ .bank-text-link{font-size:12px!important;display:inline-block;padding:7px 3px;min-height:32px}
+ .bank-tabs{gap:16px;overflow-x:auto;white-space:nowrap;max-width:100%;min-height:44px}.bank-tabs button{font-size:14px;min-height:44px;flex-shrink:0}
+ .bank-payment-action{margin-left:0}.bank-home .bank-letters{min-width:0!important;font-size:10px}.bank-home .bank-letters th:nth-child(n){width:20%;padding:6px 2px;overflow-wrap:anywhere}
+ .bank-forecast{margin-left:-12px;margin-right:-12px}
+ .page-intro p{font-size:15px}.eyebrow{font-size:10px;line-height:1.5}.section-heading h2{font-size:17px}
+ .service-card h2{height:auto;min-height:81px;font-size:20px}.provider,.service-number{font-size:12px}
+ .dark-visual{height:500px}.dark-visual .card-details{max-height:350px;min-height:260px}.dark-visual .description{font-size:15px}.dark-visual .terms,.dark-visual .card-details li{font-size:13px}
+ .dark-visual .connect-button{min-height:44px}.dark-visual .close-card{min-width:40px;min-height:40px}.dark-visual .offer{padding-right:28px}
+ .contact-actions{flex-wrap:wrap}.contact-description p,.contact-actions>.contact-badge{font-size:13px}
+ .assistant{right:12px;bottom:max(12px,env(safe-area-inset-bottom));max-width:calc(100vw - 24px)}
+ .chat-window{width:min(400px,calc(100vw - 24px));height:min(600px,calc(100dvh - 110px))}
+ .chat-header,.chat-form,.chat-footnote{flex-shrink:0}.chat-messages{min-height:0;padding:14px}
+ .welcome p,.message,.chat-error{font-size:15px}.suggestions button{font-size:14px;min-height:44px}.sources a{font-size:12px}
+ .chat-form textarea{font-size:16px;height:48px}.chat-form button,.chat-header button{min-width:44px;min-height:44px}.chat-footnote{font-size:10px}.assistant-label>span{font-size:12px}
+ .pos-connect{width:100%;min-height:48px}.pos-hero h1{overflow-wrap:anywhere}.pos-contracts>div{padding:18px}.pos-contracts p{overflow-wrap:anywhere}
+ .pos-application{width:calc(100vw - 16px);height:calc(100dvh - 16px);max-height:calc(100dvh - 16px);max-width:none;margin:auto}
+ .pos-application>header,.pos-application>footer,.pos-demo-note{flex-shrink:0}.pos-application>header button{min-width:44px;min-height:44px}
+ .pos-application>footer{gap:10px;padding-bottom:max(12px,env(safe-area-inset-bottom))}.pos-application-actions{flex-wrap:wrap}.pos-application-actions button{min-height:44px}
+ .pos-application-pages{overscroll-behavior:contain;touch-action:pan-x pan-y pinch-zoom}
+}
+@media(max-width:380px){.brand img{width:80px}.brand span{font-size:9px}.header-right{gap:4px}.services-grid{grid-template-columns:minmax(0,1fr)}.contact-description{gap:10px}.assistant-label{display:none}}

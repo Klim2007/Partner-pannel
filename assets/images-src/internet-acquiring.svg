@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" fill="none">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="600" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#16345a"/><stop offset="1" stop-color="#0d2340"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="450" cy="300" r="360" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#1e4a7a" stop-opacity="0.55"/><stop offset="1" stop-color="#0d2340" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="lidFace" x1="300" y1="150" x2="640" y2="380" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#0f5fb8"/><stop offset="1" stop-color="#064a97"/>
+  </linearGradient>
+  <linearGradient id="base" x1="250" y1="410" x2="700" y2="470" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#1170cf"/><stop offset="0.5" stop-color="#0a539f"/><stop offset="1" stop-color="#083f7d"/>
+  </linearGradient>
+  <linearGradient id="card" x1="560" y1="330" x2="760" y2="470" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#1a86e6"/><stop offset="1" stop-color="#0b5bb0"/>
+  </linearGradient>
+  <linearGradient id="screen" x1="330" y1="175" x2="600" y2="360" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef4fb"/>
+  </linearGradient>
+ </defs>
+
+ <rect width="900" height="600" fill="url(#bg)"/>
+ <rect width="900" height="600" fill="url(#glow)"/>
+
+ <!-- soft contact shadow -->
+ <ellipse cx="452" cy="486" rx="250" ry="34" fill="#04162c" opacity="0.55"/>
+
+ <!-- floating bank card (online payment) -->
+ <g transform="rotate(-16 660 400)">
+  <rect x="560" y="338" width="205" height="130" rx="16" fill="url(#card)" stroke="#3a97ec" stroke-opacity="0.4"/>
+  <rect x="583" y="372" width="34" height="26" rx="5" fill="#ffd66b"/>
+  <rect x="583" y="372" width="34" height="26" rx="5" fill="none" stroke="#c99a2e" stroke-opacity="0.6"/>
+  <rect x="583" y="420" width="150" height="9" rx="4.5" fill="#dbeafe" opacity="0.85"/>
+  <rect x="583" y="437" width="96" height="9" rx="4.5" fill="#bcd7f5" opacity="0.7"/>
+  <path d="M690 366c9 7 9 27 0 34" stroke="#eaf3ff" stroke-width="4" stroke-linecap="round" opacity="0.8" fill="none"/>
+  <path d="M702 358c15 11 15 43 0 54" stroke="#eaf3ff" stroke-width="4" stroke-linecap="round" opacity="0.55" fill="none"/>
+ </g>
+
+ <!-- laptop base -->
+ <path d="M243 452 L300 410 L604 410 L661 452 Z" fill="url(#base)"/>
+ <rect x="243" y="452" width="418" height="16" rx="8" fill="#0b4d95"/>
+ <rect x="392" y="452" width="120" height="8" rx="4" fill="#083b73"/>
+
+ <!-- laptop lid + bezel -->
+ <rect x="300" y="150" width="304" height="264" rx="16" fill="#0a4c98"/>
+ <rect x="300" y="150" width="304" height="264" rx="16" fill="url(#lidFace)"/>
+ <rect x="316" y="168" width="272" height="228" rx="8" fill="#0a2f5c"/>
+
+ <!-- screen: white shopping panel -->
+ <rect x="330" y="180" width="244" height="204" rx="8" fill="url(#screen)"/>
+
+ <!-- supermarket cart -->
+ <g stroke="#0b5bb0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <!-- handle -->
+  <path d="M372 224 h20 l10 20"/>
+  <!-- basket -->
+  <path d="M402 244 h132 l-20 66 h-90 z"/>
+  <!-- inner ribs -->
+  <path d="M430 244 v66 M462 244 v66 M494 244 v66" stroke-width="6" opacity="0.7"/>
+  <path d="M408 272 h122" stroke-width="6" opacity="0.7"/>
+  <!-- legs to wheels -->
+  <path d="M424 310 l-6 20 M512 310 l6 20"/>
+ </g>
+ <circle cx="418" cy="342" r="10" fill="#0b5bb0"/>
+ <circle cx="518" cy="342" r="10" fill="#0b5bb0"/>
+ <!-- items in the cart -->
+ <rect x="418" y="222" width="26" height="26" rx="4" fill="#1a86e6"/>
+ <rect x="452" y="212" width="22" height="36" rx="4" fill="#4aa3ef"/>
+ <circle cx="500" cy="234" r="14" fill="#ffd66b"/>
+
+ <text x="452" y="372" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#5a6f8c" text-anchor="middle" letter-spacing="3">ДЕМО</text>
+
+ <!-- camera dot -->
+ <circle cx="452" cy="160" r="2.4" fill="#7fb0e6"/>
+</svg>
