@@ -11,7 +11,7 @@ function ServiceCard({service:s}:{service:Service}) {
   <header className="card-header"><span className="service-number">0{s.displayOrder}</span><span className="provider">{s.provider}</span></header>
   <h2>{s.name}</h2>
   <div className="visual-wrap dark-visual">
-   <div className="icon-stage"><picture><source srcSet={s.imageUrl.replace('.webp','-dark.webp')} type="image/webp"/><img className="service-image" src={s.imageUrl.replace('.webp','-dark.png')} alt={s.imageAlt} loading={s.displayOrder>3?'lazy':'eager'}/></picture></div>
+   <div className="icon-stage"><picture>{s.imageUrl.endsWith('.webp')&&<source srcSet={s.imageUrl.replace('.webp','-dark.webp')} type="image/webp"/>}<img className="service-image" src={s.imageUrl.endsWith('.webp')?s.imageUrl.replace('.webp','-dark.png'):s.imageUrl} alt={s.imageAlt} loading={s.displayOrder>3?'lazy':'eager'}/></picture></div>
    <button className="visual-trigger" aria-label={`Подробнее: ${s.name}`} aria-expanded={open} onClick={()=>{setSuppressed(false);setOpen(true)}}><span className="view-hint">Узнать больше <ArrowUpRight size={16}/></span></button>
    <div className="card-details" inert={!open} aria-hidden={!open}>
     <p className="offer">{s.offer}</p><p className="description">{s.description}</p>

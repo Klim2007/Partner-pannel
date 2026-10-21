@@ -2,6 +2,8 @@ import express from 'express';
 import { randomBytes } from 'node:crypto';
 import path from 'node:path';
 import { existsSync } from 'node:fs';
+import {createPtsPdf} from './pts-pdf.ts';
+import {validatePts,ptsSections} from '../shared/pts.ts';
 import OpenAI from 'openai';
 import { services } from './catalog.ts';
 import { retrieve } from './knowledge.ts';
@@ -13,7 +15,8 @@ export function createApp(config:{apiKey?:string;model?:string;publicOrigin?:str
  if(publicUrl&&(publicUrl.protocol!=='https:'||publicUrl.pathname!=='/'||publicUrl.search||publicUrl.hash||publicUrl.username||publicUrl.password))throw new Error('PUBLIC_ORIGIN must be an HTTPS origin');
  const localHosts=['localhost','127.0.0.1','[::1]'];
  const app=express(); app.disable('x-powered-by');
- const sessions=new Map<string,{expires:number;requests:number[]}>();
+  const sessions=new Map<string,{expires:number;requests:number[]}>();
+  const applications=new Map<string,Array<{id:string;createdAt:string;product:string;status:string;fields:Record<string,string>}>>();
  const attempts=new Map<string,number[]>();
  const ttl=8*60*60*1000;
  const token=(req:express.Request)=>req.headers.cookie?.split(';').map(x=>x.trim()).find(x=>x.startsWith('pannel_session='))?.split('=')[1];
@@ -27,7 +30,7 @@ export function createApp(config:{apiKey?:string;model?:string;publicOrigin?:str
   if(!localHosts.includes(hostname))res.setHeader('X-Robots-Tag','noindex, nofollow');
   res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');next();
  });
- app.use(express.json({limit:'16kb'}));
+ app.use(express.json({limit:'256kb'}));
  app.use('/api',(_req,res,next)=>{res.setHeader('Cache-Control','no-store');next();});
  app.get('/api/v1/health',(_req,res)=>res.json({status:'ok',assistantReady:ready}));
  app.post('/api/v1/auth/login',(req,res)=>{
@@ -45,6 +48,33 @@ export function createApp(config:{apiKey?:string;model?:string;publicOrigin?:str
  app.post('/api/v1/auth/logout',(req,res)=>{const id=token(req);if(id)sessions.delete(id);res.clearCookie('pannel_session',{path:'/'});res.json({ok:true});});
  app.use('/api/v1',(req,res,next)=>{const id=token(req),session=id?sessions.get(id):undefined;if(!session||session.expires<Date.now())return res.status(401).json({error:'Сессия завершена. Войдите снова.'});next();});
  app.get('/api/v1/auth/session',(_req,res)=>res.json({user:{name:'klim'}}));
+ const sessionId=(req:express.Request)=>token(req)!;
+ app.post('/api/v1/applications/internet',(req,res)=>{
+  const item={id:`IA-${new Date().getFullYear()}-${randomBytes(4).toString('hex').toUpperCase()}`,createdAt:new Date().toISOString(),product:'Интернет-эквайринг',status:'Черновик',fields:{}};
+  applications.set(sessionId(req),[item,...(applications.get(sessionId(req))??[])].slice(0,50));
+  res.status(201).json(item);
+ });
+ app.post('/api/v1/applications',(req,res)=>{
+  const fields=req.body?.fields;
+  if(!fields||typeof fields!=='object'||Array.isArray(fields)||Object.values(fields).some(v=>typeof v!=='string'||v.length>1000))return res.status(400).json({error:'Некорректные данные заявления'});
+  const errors=validatePts(fields);if(errors.length)return res.status(400).json({error:errors.join('. ')});
+  const normalized=Object.fromEntries(ptsSections(fields).flatMap(s=>s.fields.map(f=>[f.key,f.readonly?'':(fields[f.key]||f.options?.[0]||'')])));
+  const id=`POS-${new Date().getFullYear()}-${randomBytes(4).toString('hex').toUpperCase()}`;
+  const item={id,createdAt:new Date().toISOString(),product:'POS-терминал',status:'Черновик',fields:normalized};
+  applications.set(sessionId(req),[item,...(applications.get(sessionId(req))??[])].slice(0,50));
+  res.status(201).json(item);
+ });
+ app.get('/api/v1/applications',(req,res)=>res.json(applications.get(sessionId(req))??[]));
+ app.post('/api/v1/applications/:id/submit',(req,res)=>{const item=(applications.get(sessionId(req))??[]).find(x=>x.id===req.params.id);if(!item)return res.status(404).json({error:'Заявка не найдена'});item.status='Принята в работу';res.json(item);});
+ app.get('/api/v1/applications/:id/pdf',async(req,res)=>{
+  const item=(applications.get(sessionId(req))??[]).find(x=>x.id===req.params.id);
+  if(!item)return res.status(404).json({error:'Заявка не найдена'});
+  if(item.product==='Интернет-эквайринг')return res.sendFile(path.resolve('public/documents/pos-application-demo.pdf'),{headers:{'Content-Type':'application/pdf','Content-Disposition':`inline; filename="${item.id}.pdf"`}});
+  try{
+   const bytes=await createPtsPdf(item);
+   res.setHeader('Content-Disposition',`inline; filename="${item.id}.pdf"`);res.type('application/pdf').send(Buffer.from(bytes));
+  }catch{res.status(500).json({error:'Не удалось сформировать PDF заявления'});}
+ });
  app.get('/api/v1/services',(_req,res)=>res.json(services));
  app.get('/api/v1/contacts',(_req,res)=>res.json([{id:'telegram',name:'Telegram'},{id:'whatsapp',name:'WhatsApp'}]));
  app.post('/api/v1/assistant/messages',async(req,res)=>{
