@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+ <defs>
+  <linearGradient id="panel" x2=".8" y2="1"><stop stop-color="#98acff"/><stop offset=".3" stop-color="#5265ef"/><stop offset="1" stop-color="#22245c"/></linearGradient>
+  <linearGradient id="edge" x2="1" y2="1"><stop stop-color="#b6c5ff"/><stop offset="1" stop-color="#35348f"/></linearGradient>
+  <linearGradient id="green" x2=".8" y2="1"><stop stop-color="#dbffb1"/><stop offset="1" stop-color="#71b84e"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#7065ff" stop-opacity=".3"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0c091f" flood-opacity=".8"/></filter>
+ </defs>
+ <ellipse cx="320" cy="260" rx="265" ry="210" fill="url(#halo)"/>
+ <ellipse cx="320" cy="399" rx="190" ry="18" fill="#6c61d9" opacity=".15"/>
+ <g fill="none" stroke="#9294ee" stroke-width="3" stroke-dasharray="5 9" opacity=".65"><path d="M153 192Q130 342 285 349"/><path d="M439 138Q562 213 459 328"/></g>
+ <g filter="url(#shadow)" transform="rotate(-7 315 245)">
+  <rect x="198" y="128" width="266" height="230" rx="30" fill="#252456"/>
+  <rect x="187" y="115" width="266" height="230" rx="30" fill="url(#panel)" stroke="url(#edge)" stroke-width="2"/>
+  <rect x="207" y="138" width="226" height="31" rx="10" fill="#12162f" opacity=".55"/>
+  <circle cx="222" cy="153" r="4" fill="#c8ff9e"/><circle cx="236" cy="153" r="4" fill="#aebcff"/>
+  <rect x="207" y="184" width="103" height="94" rx="15" fill="#171c43"/>
+  <circle cx="258" cy="218" r="15" fill="#c5d0ff"/><path d="M229 262q3-27 29-27t29 27" fill="#8a9cf5"/>
+  <rect x="323" y="184" width="110" height="94" rx="15" fill="#7376d9"/>
+  <circle cx="378" cy="218" r="15" fill="#e3e7ff"/><path d="M349 262q3-27 29-27t29 27" fill="#c7d0ff"/>
+  <text x="209" y="320" fill="#eef1ff" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="3">DION</text>
+  <rect x="362" y="297" width="61" height="26" rx="13" fill="url(#green)"/><path d="M386 306h10v8h-10zm10 2 6-3v10l-6-3" fill="#29462c"/>
+ </g>
+ <g filter="url(#shadow)" transform="rotate(12 470 133)">
+  <rect x="417" y="82" width="108" height="91" rx="23" fill="#4a6a37"/>
+  <rect x="412" y="74" width="108" height="91" rx="23" fill="url(#green)" stroke="#e0ffc7"/>
+  <path d="M440 99h51v34h-26l-15 12v-12h-10z" fill="none" stroke="#34542c" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M451 111h29m-29 11h19" stroke="#34542c" stroke-width="4" stroke-linecap="round"/>
+ </g>
+ <g filter="url(#shadow)" transform="rotate(-14 167 318)">
+  <rect x="117" y="270" width="106" height="102" rx="22" fill="#35335e"/>
+  <rect x="111" y="262" width="106" height="102" rx="22" fill="url(#edge)" stroke="#adb8ff"/>
+  <path d="M143 283h29l14 15v44h-43z" fill="#eef0ff"/><path d="M172 283v15h14" fill="#929de6"/>
+  <path d="M153 311h23m-23 10h23m-23 10h13" stroke="#6772ba" stroke-width="3" stroke-linecap="round"/>
+ </g>
+ <circle cx="151" cy="159" r="9" fill="#c6f6a0"/><circle cx="479" cy="318" r="6" fill="#a9b4ff"/>
+</svg>

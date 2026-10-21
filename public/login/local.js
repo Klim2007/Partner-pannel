@@ -1,5 +1,11 @@
 const username=document.querySelector('#userName');
+const demoNotice=document.createElement('script');demoNotice.src='/demo-notice.js';document.body.append(demoNotice);
 const password=document.querySelector('#password');
+const mobileStyles=document.createElement('link');mobileStyles.rel='stylesheet';mobileStyles.href='/login/mobile.css';document.head.append(mobileStyles);
+const originalLabels=[...document.querySelectorAll('.login_label')];
+originalLabels[0]?.closest('.row')?.classList.add('mobile-auth-labels');
+username.closest('.row')?.classList.add('mobile-auth-fields');
+for(const [index,input] of [username,password].entries()){const label=document.createElement('label');label.className='mobile-auth-label';label.htmlFor=input.id;label.textContent=originalLabels[index]?.textContent?.trim()||(index?'Пароль':'Пользователь');input.before(label);}
 username.setAttribute('aria-label','Пользователь');password.setAttribute('aria-label','Пароль');
 username.autocomplete='username';password.autocomplete='current-password';
 username.focus();
@@ -23,7 +29,7 @@ for(const language of ['ru','en','kz']) {const el=document.querySelector('.langu
 let keyboard;
 function toggleKeyboard(){
  if(keyboard){keyboard.remove();keyboard=null;return;}
- keyboard=document.createElement('div');keyboard.setAttribute('role','dialog');keyboard.setAttribute('aria-label','Виртуальная клавиатура');
+ keyboard=document.createElement('div');keyboard.id='localKeyboardPanel';keyboard.setAttribute('role','dialog');keyboard.setAttribute('aria-label','Виртуальная клавиатура');
  Object.assign(keyboard.style,{position:'fixed',top:'190px',left:'50%',transform:'translateX(-50%)',zIndex:'1000',background:'white',padding:'16px',border:'1px solid #00a9ff',boxShadow:'0 8px 32px #00288233',width:'360px'});
  for(const row of ['1234567890','qwertyuiop','asdfghjkl','zxcvbnm']) {const line=document.createElement('div');for(const letter of row){const key=document.createElement('button');key.textContent=letter;key.type='button';key.style.cssText='padding:4px 7px;margin:2px;color:#002882;background:#f1f7ff;border:1px solid #ccd9eb';key.onclick=()=>{password.value+=letter;};line.append(key);}keyboard.append(line);}
  for(const [label,action] of [['⌫',()=>password.value=password.value.slice(0,-1)],['Закрыть',toggleKeyboard]]){const key=document.createElement('button');key.textContent=label;key.onclick=action;keyboard.append(key);}

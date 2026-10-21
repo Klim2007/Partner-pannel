@@ -1,0 +1,17 @@
+.mobile-auth-label{display:none}
+@media(max-width:800px){
+ html,body{height:auto;min-height:100%;margin:0;max-width:100%}body{padding-bottom:0}
+ .container-fluid{padding:0 12px}.top{padding:12px 0;display:flex;flex-wrap:wrap;gap:6px 10px;line-height:1.5}.top a{font-size:14px;min-height:36px;display:inline-flex;align-items:center}
+ .site-wrapper,.site-wrapper-inner{display:block;height:auto;min-height:0}.inner.cover{padding:0 16px}.container{width:100%;max-width:600px;padding:0;margin:0 auto}
+ .column{box-shadow:none;margin:0;display:flex;flex-wrap:wrap}.column>[class*='col-']{float:none;width:100%;max-width:100%;flex:0 0 100%;padding:6px 0}
+ .column>[class*='col-']:empty{display:none}.column br{display:none}.logo{left:0;top:0;margin:12px 0}.logo img{width:145px;height:auto}
+ .right-panel{top:0!important}.right-panel #lang{position:static;display:flex;justify-content:flex-end;min-height:44px}.language{width:44px;height:44px;line-height:44px;text-align:center}.currency-info{padding-top:0}
+ .mobile-auth-labels{display:none}.mobile-auth-fields>.col-md-3:first-child{display:none}.mobile-auth-fields .mobile-auth-label{display:block;font-size:16px;font-weight:400;color:#002882;margin:8px 0}
+ input.input,input.inputact,.winlogin .input,.winlogin .inputact{width:100%!important;height:48px!important;font-size:16px!important;padding:10px!important;box-sizing:border-box}
+ .mobile-auth-fields>.col-md-6{position:relative;padding-bottom:12px}.keyboardInputInitiator{right:12px;bottom:26px;width:24px;height:24px}#password{padding-right:48px!important}
+ #submitButton{width:100%;min-height:48px;font-size:16px}#forgotPassword{min-height:44px;width:100%;padding:10px}
+ .tooltips{position:static;min-width:0;width:100%;margin-top:8px;padding:8px;line-height:1.5;font-size:14px;box-sizing:border-box}.tooltips:after{display:none}
+ .news_table{width:100%;table-layout:fixed}.news{overflow-wrap:anywhere;font-size:15px;line-height:1.6;text-align:left}.news-title{font-size:21px;line-height:1.35;margin-top:10px}.news img{max-width:100%;height:auto}
+ .mastfoot,.footer-cell,.cover-container{position:static!important;display:block;height:auto;width:100%!important}.mastfoot{padding:20px 16px;margin-top:24px}.footer-cell .row{margin:0}.footer-cell [class*='col-']{width:100%;max-width:100%;flex:0 0 100%;padding:10px 0}.footer-cell{font-size:14px;overflow-wrap:anywhere}
+ #localKeyboardPanel{width:calc(100vw - 24px)!important;max-width:360px;top:100px!important;max-height:60dvh;overflow:auto;box-sizing:border-box}#localKeyboardPanel button{min-height:36px;padding:5px!important;margin:1px!important}
+}

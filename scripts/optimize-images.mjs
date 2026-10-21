@@ -1,5 +1,5 @@
-// Пережимает мастера из assets/images-src/*.png в облегчённые WebP + PNG-фолбэк
-// в public/images/. Запуск: npm run images:optimize (VISUAL-01).
+// Пережимает мастера из assets/images-src/*.{png,svg} в облегчённые WebP +
+// PNG-фолбэк в public/images/. Запуск: npm run images:optimize (VISUAL-01).
 import { readdir, mkdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -13,10 +13,12 @@ const pngSize = { mascot: 160, _default: 560 };
 const kb = n => (n / 1024).toFixed(0) + ' КБ';
 
 await mkdir(OUT, { recursive: true });
-const files = (await readdir(SRC)).filter(f => f.endsWith('.png'));
+const files = (await readdir(SRC)).filter(f => f.endsWith('.png') || f.endsWith('.svg'));
 for (const file of files) {
- const name = path.basename(file, '.png');
- const src = sharp(path.join(SRC, file));
+ const ext = path.extname(file);
+ const name = path.basename(file, ext);
+ // SVG рендерим с высокой плотностью, чтобы после ужатия иллюстрация осталась чёткой.
+ const src = sharp(path.join(SRC, file), ext === '.svg' ? { density: 300 } : {});
  await src.clone().resize(webpSize[name] ?? webpSize._default, null, { fit: 'cover' })
   .webp({ quality: 74, effort: 6 }).toFile(path.join(OUT, `${name}.webp`));
  await src.clone().resize(pngSize[name] ?? pngSize._default, null, { fit: 'cover' })

@@ -1,5 +1,11 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App';
+import Home from './Home';
+import PosTerminal from './PosTerminal';
+import InternetAcquiring from './InternetAcquiring';
 import './styles.css';
-createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
+import './mobile.css';
+const demoNotice=document.createElement('script');demoNotice.src='/demo-notice.js';document.body.append(demoNotice);
+const page=location.pathname==='/home'?<Home/>:location.pathname==='/pos-terminal'?<PosTerminal/>:location.pathname==='/internet-acquiring'?<InternetAcquiring/>:<App/>;
+createRoot(document.getElementById('root')!).render(<React.StrictMode>{page}</React.StrictMode>);
